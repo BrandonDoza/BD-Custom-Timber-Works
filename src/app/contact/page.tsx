@@ -1,6 +1,14 @@
 "use client";
 
-import { Box, Button, Input, Textarea, Stack, Text, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Input,
+  Textarea,
+  Stack,
+  Text,
+  Link,
+} from "@chakra-ui/react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaPhoneAlt, FaSms } from "react-icons/fa";
 import { useState, useEffect } from "react";
@@ -17,7 +25,7 @@ export default function Contact() {
   const [showPhoneNumber, setShowPhoneNumber] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  const phoneNumber = "+19703892278"; 
+  const phoneNumber = "+19703892278";
 
   useEffect(() => {
     setIsMobile(window.innerWidth <= 768);
@@ -28,40 +36,32 @@ export default function Contact() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Email validation function
   const validateEmail = (email: string) => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   };
 
-  // Phone validation function
   const validatePhone = (phone: string) => {
     const phoneRegex = /^[0-9]{10}$/;
     return phoneRegex.test(phone);
   };
 
-  // Submit handler function
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Clear previous error messages
     setEmailError("");
     setPhoneError("");
     setFormError("");
 
-    // Validate email
     if (!validateEmail(email)) {
       setEmailError("Please enter a valid email address.");
     }
 
-    // Validate phone number if provided
     if (phone && !validatePhone(phone)) {
       setPhoneError("Phone number must be 10 digits.");
     }
 
-    // If no errors, simulate form submission
     if (!emailError && !phoneError) {
-      // Send email using EmailJS
       const templateParams = {
         user_email: email,
         user_phone: phone,
@@ -70,16 +70,15 @@ export default function Contact() {
 
       emailjs
         .send(
-          "service_pbo2ar9",     // Service ID
-          "template_whh7l9q",    // Template ID
-          templateParams,        // Template params (form data)
-          "xlOn1RAT9PBJN7u8B"     // Your EmailJS user ID
+          "service_pbo2ar9", // Service ID
+          "template_whh7l9q", // Template ID
+          templateParams, // Template params (form data)
+          "xlOn1RAT9PBJN7u8B" // Your EmailJS user ID
         )
         .then(
           (response) => {
             console.log("Email sent successfully:", response);
             alert("Your message has been sent!");
-            // Reset form
             setEmail("");
             setPhone("");
             setMessage("");
@@ -157,7 +156,11 @@ export default function Contact() {
           </Box>
 
           {/* Form error */}
-          {formError && <Text color="red.500" textAlign="center">{formError}</Text>}
+          {formError && (
+            <Text color="red.500" textAlign="center">
+              {formError}
+            </Text>
+          )}
 
           {/* Send Email Button */}
           <Box mb={4}>
@@ -169,13 +172,24 @@ export default function Contact() {
 
           {/* Call Us Button */}
           <Box mb={4}>
-            <Button colorScheme="blue" size="lg" width="100%" onClick={handleCallUsClick}>
+            <Button
+              colorScheme="blue"
+              size="lg"
+              width="100%"
+              onClick={handleCallUsClick}
+            >
               <FaPhoneAlt style={{ marginRight: "8px" }} />
               {showPhoneNumber ? "Hide" : "Call Us"}
             </Button>
 
             {showPhoneNumber && (
-              <Text mt={2} fontSize="lg" fontWeight="bold" color="black" textAlign="center">
+              <Text
+                mt={2}
+                fontSize="lg"
+                fontWeight="bold"
+                color="black"
+                textAlign="center"
+              >
                 <Link href={`tel:${phoneNumber}`} color="blue.500">
                   📞 {phoneNumber}
                 </Link>
@@ -186,7 +200,12 @@ export default function Contact() {
           {/* Mobile-Only SMS Button */}
           {isMobile && (
             <Box mb={4}>
-              <Link href={`sms:${phoneNumber}`} _hover={{ textDecoration: "none" }} width="100%" color="black">
+              <Link
+                href={`sms:${phoneNumber}`}
+                _hover={{ textDecoration: "none" }}
+                width="100%"
+                color="black"
+              >
                 <Button colorScheme="green" size="lg" width="100%">
                   <FaSms style={{ marginRight: "8px" }} />
                   Send Text
