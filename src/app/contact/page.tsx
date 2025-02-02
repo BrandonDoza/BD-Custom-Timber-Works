@@ -13,25 +13,89 @@ export default function Contact() {
   const [emailError, setEmailError] = useState("");
   const [phoneError, setPhoneError] = useState("");
   const [formError, setFormError] = useState("");
+
   const [showPhoneNumber, setShowPhoneNumber] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   const phoneNumber = "+19703892278"; 
 
   useEffect(() => {
-    // Check if the user is on a mobile device
     setIsMobile(window.innerWidth <= 768);
-
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Email validation function
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  // Phone validation function
+  const validatePhone = (phone: string) => {
+    const phoneRegex = /^[0-9]{10}$/;
+    return phoneRegex.test(phone);
+  };
+
+  // Submit handler function
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Clear previous error messages
+    setEmailError("");
+    setPhoneError("");
+    setFormError("");
+
+    // Validate email
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address.");
+    }
+
+    // Validate phone number if provided
+    if (phone && !validatePhone(phone)) {
+      setPhoneError("Phone number must be 10 digits.");
+    }
+
+    // If no errors, simulate form submission
+    if (!emailError && !phoneError) {
+      // Send email using EmailJS
+      const templateParams = {
+        user_email: email,
+        user_phone: phone,
+        message: message,
+      };
+
+      emailjs
+        .send(
+          "service_pbo2ar9",     // Service ID
+          "template_whh7l9q",    // Template ID
+          templateParams,        // Template params (form data)
+          "xlOn1RAT9PBJN7u8B"     // Your EmailJS user ID
+        )
+        .then(
+          (response) => {
+            console.log("Email sent successfully:", response);
+            alert("Your message has been sent!");
+            // Reset form
+            setEmail("");
+            setPhone("");
+            setMessage("");
+          },
+          (err) => {
+            console.log("Failed to send email:", err);
+            setFormError("Failed to send the email. Please try again later.");
+          }
+        );
+    } else {
+      setFormError("Please fix the errors above before submitting.");
+    }
+  };
+
   const handleCallUsClick = () => {
-    setShowPhoneNumber((prev) => !prev); // ✅ Toggles the phone number visibility
+    setShowPhoneNumber((prev) => !prev);
   };
 
   return (
@@ -50,7 +114,7 @@ export default function Contact() {
         Contact Us
       </Text>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <Stack align="stretch">
           {/* Email Input */}
           <Box mb={4}>

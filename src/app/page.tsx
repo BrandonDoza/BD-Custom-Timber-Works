@@ -1,6 +1,6 @@
 // import Image from "next/image";
 import styles from "./page.module.css";
-import { Center, Container, Heading, Text, Image, Box } from "@chakra-ui/react";
+import { Container, Text, Image, Box } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -39,7 +39,7 @@ export default function Home() {
           Each project is crafted with precision and care, using the finest materials to ensure lasting quality and aesthetic appeal. Our team is passionate about transforming wood into works of art that add warmth, character, and a personal touch to your space.
         </Text>
         <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6" mt={4}>
-          Explore our portfolio and discover how we can help you create something truly unique. From design to final product, BD Custom Timber Works is dedicated to delivering craftsmanship that you’ll treasure for years to come.
+          Explore our portfolio and discover how we can help you create something truly unique. From design to final product, BD Custom Timber Works is dedicated to delivering craftsmanship that you'll treasure for years to come.
         </Text>
         <Image
           src="/images/handplane.jpg"
