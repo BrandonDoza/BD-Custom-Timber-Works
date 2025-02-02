@@ -31,9 +31,10 @@ export default function Home() {
       >
         <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6">
           BD Custom Timber Works brings your vision to life with the timeless
-          beauty and craftsmanship of wood. Whether you're looking for custom
-          furniture, charcuterie boards, or bespoke woodworking solutions, we
-          specialize in creating pieces that blend artistry with functionality.
+          beauty and craftsmanship of wood. Whether you&rsquo;re looking for
+          custom furniture, charcuterie boards, or bespoke woodworking
+          solutions, we specialize in creating pieces that blend artistry with
+          functionality.
         </Text>
         <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6" mt={4}>
           Each project is crafted with precision and care, using the finest
@@ -44,9 +45,10 @@ export default function Home() {
         <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6" mt={4}>
           Explore our portfolio and discover how we can help you create
           something truly unique. From design to final product, BD Custom Timber
-          Works is dedicated to delivering craftsmanship that you'll treasure
-          for years to come.
+          Works is dedicated to delivering craftsmanship that you&rsquo;ll
+          treasure for years to come.
         </Text>
+
         <Image
           src="/images/handplane.jpg"
           alt="Woodworking Hand Plane"

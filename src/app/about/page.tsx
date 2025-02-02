@@ -33,17 +33,17 @@ export default function About() {
         overflow="hidden"
       >
         <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6">
-          At BD Custom Timber Works, we're passionate about creating
+          At BD Custom Timber Works, we&rsquo;re passionate about creating
           exceptional, handcrafted wood pieces that elevate any space. Founded
           by Brandon, a woodworking enthusiast based in the heart of Arvada,
           Colorado, our company is driven by a love for the outdoors and the
-          beauty of the mountains that surround us. When Brandon isn't in the
-          workshop, you'll find him mountain biking, exploring nature with his
-          two dogs, or spending quality time with his wife. We bring that same
-          dedication and care into every project, whether it's custom furniture,
-          charcuterie boards, or unique woodworking solutions. At BD Custom
-          Timber Works, we don't just build furniture—we craft pieces that tell
-          a story and become a part of your home.
+          beauty of the mountains that surround us. When Brandon isn&rsquo;t in
+          the workshop, you&rsquo;ll find him mountain biking, exploring nature
+          with his two dogs, or spending quality time with his wife. We bring
+          that same dedication and care into every project, whether it&rsquo;s
+          custom furniture, charcuterie boards, or unique woodworking solutions.
+          At BD Custom Timber Works, we don&rsquo;t just build furniture—we
+          craft pieces that tell a story and become a part of your home.
         </Text>
 
         <Image
