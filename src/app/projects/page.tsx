@@ -3,17 +3,6 @@ import ProjectCard from "@/components/projectCard";
 import { projects } from "../projectData/projectData";
 
 export default function Projects() {
-  const projectsToDisplay = projects.map((project) => (
-    <ProjectCard
-      key={project.id}
-      id={project.id}
-      title={project.title}
-      image={project.image}
-      price={project.price}
-      description={project.description}
-      size={project.size}
-    />
-  ));
   return (
     <Box
       display="flex"

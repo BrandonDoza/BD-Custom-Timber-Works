@@ -15,7 +15,7 @@ export const projects: Project[] = [
     price: "From $80",
     size: '12" x 18"',
     description:
-      "This custom wood and resin chacuterie board can be made of maple, walnut, or hickory.",
+      "This custom wood and resin chacuterie board can be made of maple, walnut, or hickory, and be custom engraved with just about anything.",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     price: "From $200",
     size: '24" x 24"',
     description:
-      "This is a custom cutting board made with the end grains of walnut, maple, and/or hickory. The process is a very long and tedious one, but in the end it makes for an amazing finished piece.",
+      "This is a custom cutting board made with the end grains of walnut, maple, and/or hickory. The process is a very long and tedious one, but in the end it makes for an amazing finished piece. It can be custom engraved with just about anything.",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     price: "From $20",
     size: 'These can range from 8" tall to 16" tall',
     description:
-      "The mountains are calling, and you must go! Perfect for any mantle, shelf, or end table. These can be customized in just about any color and custom text can be engraved as well.",
+      "The mountains are calling, and you must go! Perfect for any mantle, shelf, or end table. These can be customized in just about any color and and be custom engraved with just about anything.",
   },
   {
     id: 4,

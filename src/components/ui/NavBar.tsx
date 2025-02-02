@@ -1,7 +1,7 @@
 "use client";
 
-import { Box, Button, Heading, Image } from "@chakra-ui/react";
-import { RiArrowRightLine, RiMailLine } from "react-icons/ri";
+import { Box, Button, Image } from "@chakra-ui/react";
+import { RiMailLine } from "react-icons/ri";
 import { GiHammerNails } from "react-icons/gi";
 import { AiOutlineUser } from "react-icons/ai";
 import { useRouter } from "next/navigation";

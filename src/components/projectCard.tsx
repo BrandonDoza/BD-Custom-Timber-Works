@@ -5,17 +5,13 @@ import { useRouter } from "next/navigation";
 export default function ProjectCard({
   id,
   title,
-  size,
   image,
   price,
-  description,
 }: {
   id: number;
   title: string;
-  size: string;
   image: string;
   price: string;
-  description: string;
 }) {
   const router = useRouter();
 
