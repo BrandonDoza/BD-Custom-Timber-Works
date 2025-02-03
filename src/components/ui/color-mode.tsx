@@ -4,16 +4,20 @@ import type { IconButtonProps } from "@chakra-ui/react";
 import { IconButton, Skeleton } from "@chakra-ui/react";
 import { ThemeProvider, useTheme } from "next-themes";
 import type { ThemeProviderProps } from "next-themes";
+import type { SystemStyleObject } from "@chakra-ui/system";
 import * as React from "react";
 import { LuMoon, LuSun } from "react-icons/lu";
 
 export function ColorModeProvider(props: ThemeProviderProps) {
-  return <ThemeProvider attribute="class" disableTransitionOnChange {...props} />;
+  return (
+    <ThemeProvider attribute="class" disableTransitionOnChange {...props} />
+  );
 }
 
 function useCustomColorMode() {
   const { resolvedTheme, setTheme } = useTheme();
-  const toggleColorMode = () => setTheme(resolvedTheme === "light" ? "dark" : "light");
+  const toggleColorMode = () =>
+    setTheme(resolvedTheme === "light" ? "dark" : "light");
 
   return {
     colorMode: resolvedTheme,
@@ -32,7 +36,9 @@ export function ColorModeIcon() {
   return colorMode === "light" ? <LuSun /> : <LuMoon />;
 }
 
-type ColorModeButtonProps = Omit<IconButtonProps, "aria-label">;
+type ColorModeButtonProps = Omit<IconButtonProps, "aria-label"> & {
+  sx?: SystemStyleObject;
+};
 
 export const ColorModeButton = React.forwardRef<
   HTMLButtonElement,
