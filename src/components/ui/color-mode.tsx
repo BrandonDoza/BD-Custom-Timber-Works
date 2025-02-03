@@ -8,6 +8,8 @@ import type { SystemStyleObject } from "@chakra-ui/system";
 import * as React from "react";
 import { LuMoon, LuSun } from "react-icons/lu";
 
+export type ColorModeProviderProps = ThemeProviderProps;
+
 export function ColorModeProvider(props: ThemeProviderProps) {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange {...props} />

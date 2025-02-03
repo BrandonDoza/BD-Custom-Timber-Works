@@ -1,4 +1,4 @@
-import { Slider as ChakraSlider, For, HStack } from "@chakra-ui/react"
+import { Slider as ChakraSlider, HStack } from "@chakra-ui/react"
 import * as React from "react"
 
 export interface SliderProps extends ChakraSlider.RootProps {
@@ -10,14 +10,19 @@ export interface SliderProps extends ChakraSlider.RootProps {
 export const Slider = React.forwardRef<HTMLDivElement, SliderProps>(
   function Slider(props, ref) {
     const { marks: marksProp, label, showValue, ...rest } = props
-    const value = props.defaultValue ?? props.value
+    const value = props.defaultValue ?? props.value // Default value or controlled value
 
-    const marks = marksProp?.map((mark) => {
+    // Normalize marks to handle both numeric and labeled marks
+    const marks = marksProp?.map((mark: number) => {
       if (typeof mark === "number") return { value: mark, label: undefined }
       return mark
     })
 
-    const hasMarkLabel = !!marks?.some((mark) => mark.label)
+    // Determine if any mark has a label
+    const hasMarkLabel = !!marks?.some(
+      (mark: number | { value: number; label?: React.ReactNode }) =>
+        typeof mark !== "number" && mark.label
+    )
 
     return (
       <ChakraSlider.Root ref={ref} thumbAlignment="center" {...rest}>
@@ -34,7 +39,9 @@ export const Slider = React.forwardRef<HTMLDivElement, SliderProps>(
           <ChakraSlider.Track>
             <ChakraSlider.Range />
           </ChakraSlider.Track>
+          {/* Render thumbs with the value prop */}
           <SliderThumbs value={value} />
+          {/* Render marks if they exist */}
           <SliderMarks marks={marks} />
         </ChakraSlider.Control>
       </ChakraSlider.Root>
@@ -44,17 +51,18 @@ export const Slider = React.forwardRef<HTMLDivElement, SliderProps>(
 
 function SliderThumbs(props: { value?: number[] }) {
   const { value } = props
+
   return (
-    <For each={value}>
-      {(_, index) => (
-        <ChakraSlider.Thumb key={index} index={index}>
-          <ChakraSlider.HiddenInput />
-        </ChakraSlider.Thumb>
-      )}
-    </For>
+    <>
+      {/* Render each thumb based on value */}
+      {value?.map((val, index) => (
+        <ChakraSlider.Thumb key={index} value={val} />
+      ))}
+    </>
   )
 }
 
+// Marks Component
 interface SliderMarksProps {
   marks?: Array<number | { value: number; label: React.ReactNode }>
 }
@@ -62,7 +70,7 @@ interface SliderMarksProps {
 const SliderMarks = React.forwardRef<HTMLDivElement, SliderMarksProps>(
   function SliderMarks(props, ref) {
     const { marks } = props
-    if (!marks?.length) return null
+    if (!marks?.length) return null // Return null if no marks
 
     return (
       <ChakraSlider.MarkerGroup ref={ref}>
@@ -80,3 +88,4 @@ const SliderMarks = React.forwardRef<HTMLDivElement, SliderMarksProps>(
     )
   },
 )
+
