@@ -30,20 +30,33 @@ export default function CustomEngraving() {
         flex="1"
         marginBottom="15px"
         overflow="hidden"
-        display="flex" 
+        display="flex"
         flexDirection="column"
-      justifyContent="flex-start" 
-      alignItems="center" 
+        justifyContent="flex-start"
+        alignItems="center"
       >
-        <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6" px={["5px", "90px"]} marginBottom="20px">
-          We can custom engrave just about anything into your purchase. Names, logos, phrases, even some pictures. It makes for the perfect personalized gift for weddings, house warmings, holidays, birthdays, real estate closings, and so much more!!!
+        <Text
+          color="black"
+          fontSize={["md", "xl"]}
+          lineHeight="1.6"
+          px={["5px", "90px"]}
+          marginBottom="20px"
+        >
+          We can custom engrave just about anything into your purchase. Names,
+          logos, phrases, even some pictures. It makes for the perfect
+          personalized gift for weddings, house warmings, holidays, birthdays,
+          real estate closings, and so much more!!!
         </Text>
-        <Box width={["100%", "75%"]} border="4px solid black" borderRadius="8px">
-      <video style={{ width: "100%" }} controls>
-        <source src="/images/Laser Video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </Box>        
+        <Box
+          width={["100%", "75%"]}
+          border="4px solid black"
+          borderRadius="8px"
+        >
+          <video style={{ width: "100%" }} controls>
+            <source src="/images/Laser Video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </Box>
       </Box>
     </Container>
   );

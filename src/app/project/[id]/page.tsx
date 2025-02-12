@@ -58,7 +58,7 @@ export default function ProjectPage({
           style={{
             width: "100%",
             maxHeight: "300px",
-            objectFit: "cover",
+            objectFit: "contain",
             borderRadius: "8px",
             marginBottom: "15px",
           }}

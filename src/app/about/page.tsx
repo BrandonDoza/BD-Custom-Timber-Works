@@ -1,6 +1,12 @@
-import { Container, Box, Text, Image } from "@chakra-ui/react";
+"use client";
+
+import { Container, Box, Text, Image, Button } from "@chakra-ui/react";
+import { useAppRouter } from "../RouterContext";
+import { FaRegQuestionCircle } from "react-icons/fa";
 
 export default function About() {
+  const { navigateToFaq } = useAppRouter();
+
   return (
     <Container
       bgImage="url('/images/Aspens2.jpg')"
@@ -44,6 +50,21 @@ export default function About() {
           At BD Custom Timber Works, we don&rsquo;t just build furniture—we
           craft pieces that tell a story and become a part of your home.
         </Text>
+        <Button
+          size={["sm", "xl"]}
+          width={["150px", "180px"]}
+          margin="20px"
+          variant="surface"
+          onClick={navigateToFaq}
+          _hover={{
+            bg: "white",
+            color: "black",
+            boxShadow: "0 5px 10px rgba(255, 245, 225, 0.2)",
+          }}
+        >
+          <FaRegQuestionCircle />
+          <Box>F.A.Q.</Box>
+        </Button>
 
         <Image
           src="/images/tablesaw2.jpg"
