@@ -3,6 +3,7 @@ import "./globals.css";
 import { Provider } from "@/components/ui/provider";
 import NavBar from "@/components/ui/NavBar";
 import Footer from "@/components/Footer";
+import { RouterProvider } from "./RouterContext";
 
 export const metadata: Metadata = {
   title: "BD Custom Timber Works",
@@ -30,9 +31,11 @@ export default function RootLayout({
         }}
       >
         <Provider>
-          <NavBar />
-          <main style={{ flex: 1, overflowY: "auto" }}>{children}</main>
-          <Footer />
+          <RouterProvider>
+            <NavBar />
+            <main style={{ flex: 1, overflowY: "auto" }}>{children}</main>
+            <Footer />
+          </RouterProvider>
         </Provider>
       </body>
     </html>

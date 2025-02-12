@@ -13,6 +13,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaPhoneAlt, FaSms } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
+import { FaRegQuestionCircle } from "react-icons/fa";
+import { useAppRouter } from "../RouterContext";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
@@ -26,6 +28,8 @@ export default function Contact() {
   const [isMobile, setIsMobile] = useState(false);
 
   const phoneNumber = "+19703892278";
+
+  const { navigateToFaq } = useAppRouter();
 
   useEffect(() => {
     setIsMobile(window.innerWidth <= 768);
@@ -72,8 +76,8 @@ export default function Contact() {
         .send(
           "service_pbo2ar9", // Service ID
           "template_whh7l9q", // Template ID
-          templateParams, // Template params (form data)
-          "xlOn1RAT9PBJN7u8B" // Your EmailJS user ID
+          templateParams,
+          "xlOn1RAT9PBJN7u8B" // EmailJS user ID
         )
         .then(
           (response) => {
@@ -112,7 +116,23 @@ export default function Contact() {
       <Text fontSize="2xl" mb={4} textAlign="center" color="black">
         Contact Us
       </Text>
-
+      <Box display="flex" justifyContent="center" mt={4}>
+        <Button
+          size={["sm", "xl"]}
+          width={["150px", "180px"]}
+          margin="10px"
+          variant="surface"
+          onClick={navigateToFaq}
+          _hover={{
+            bg: "white",
+            color: "black",
+            boxShadow: "0 5px 10px rgba(255, 245, 225, 0.2)",
+          }}
+        >
+          <FaRegQuestionCircle />
+          <Box>F.A.Q.</Box>
+        </Button>
+      </Box>
       <form onSubmit={handleSubmit}>
         <Stack align="stretch">
           {/* Email Input */}

@@ -35,7 +35,7 @@ export const Slider = React.forwardRef<HTMLDivElement, SliderProps>(
             <ChakraSlider.ValueText />
           </HStack>
         )}
-        <ChakraSlider.Control data-has-mark-label={hasMarkLabel || undefined}>
+        <ChakraSlider.Control data-has-mark-label={hasMarkLabel || undefined} {...({} as any)}>
           <ChakraSlider.Track>
             <ChakraSlider.Range />
           </ChakraSlider.Track>
@@ -56,7 +56,7 @@ function SliderThumbs(props: { value?: number[] }) {
     <>
       {/* Render each thumb based on value */}
       {value?.map((val, index) => (
-        <ChakraSlider.Thumb key={index} value={val} />
+        <ChakraSlider.Thumb key={index}/>
       ))}
     </>
   )
@@ -73,12 +73,12 @@ const SliderMarks = React.forwardRef<HTMLDivElement, SliderMarksProps>(
     if (!marks?.length) return null // Return null if no marks
 
     return (
-      <ChakraSlider.MarkerGroup ref={ref}>
+      <ChakraSlider.MarkerGroup ref={ref} {...({} as any)}>
         {marks.map((mark, index) => {
           const value = typeof mark === "number" ? mark : mark.value
           const label = typeof mark === "number" ? undefined : mark.label
           return (
-            <ChakraSlider.Marker key={index} value={value}>
+            <ChakraSlider.Marker key={index} value={value} {...({} as any)}>
               <ChakraSlider.MarkerIndicator />
               {label}
             </ChakraSlider.Marker>
