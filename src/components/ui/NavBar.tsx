@@ -4,6 +4,7 @@ import { Box, Button, Image } from "@chakra-ui/react";
 import { RiMailLine } from "react-icons/ri";
 import { GiHammerNails } from "react-icons/gi";
 import { AiOutlineUser } from "react-icons/ai";
+import { GiLaserPrecision } from "react-icons/gi";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -21,6 +22,11 @@ export default function NavBar() {
   function navigateToContact() {
     router.push("/contact");
   }
+
+  function navigateToCustomEngraving() {
+    router.push("/customengraving");
+  }
+
 
   return (
     <Box
@@ -88,6 +94,20 @@ export default function NavBar() {
         >
           <AiOutlineUser />
           <Box display={["none", "inline"]}> About</Box>
+        </Button>
+        <Button
+          size={["sm", "xl"]}
+          width={["50px", "180px"]}
+          variant="surface"
+          onClick={navigateToCustomEngraving}
+          _hover={{
+            bg: "white",
+            color: "black",
+            boxShadow: "0 5px 10px rgba(255, 245, 225, 0.2)",
+          }}
+        >
+           <GiLaserPrecision />
+          <Box display={["none", "inline"]}>Custom Engraving</Box>
         </Button>
       </Box>
     </Box>

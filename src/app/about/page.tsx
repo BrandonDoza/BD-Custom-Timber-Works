@@ -21,10 +21,9 @@ export default function About() {
         bg="#D1D0CE"
         borderRadius="lg"
         shadow="md"
-        opacity="85%"
         width={["90%", "80%", "60%"]}
         minHeight="50vh"
-        maxHeight="100vh"
+        maxHeight={["70vh", "60vh"]}
         textAlign="center"
         marginTop={["30px", "80px"]}
         padding={["15px", "30px"]}
