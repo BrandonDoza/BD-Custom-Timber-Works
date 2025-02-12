@@ -1,4 +1,4 @@
-import { Container, Box, Text, Image } from "@chakra-ui/react";
+import { Container, Box, Text } from "@chakra-ui/react";
 
 export default function CustomEngraving() {
   return (

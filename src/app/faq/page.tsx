@@ -1,5 +1,4 @@
-import { Container, Box, Text, Image } from "@chakra-ui/react";
-import { FaRegQuestionCircle } from "react-icons/fa";
+import { Container, Box, Text } from "@chakra-ui/react";
 
 export default function About() {
   return (
@@ -33,7 +32,7 @@ export default function About() {
         overflow="scroll"
       >
         <Text color="brown" fontSize={["xl", "2xl"]} marginBottom="16px">
-          Why don't you sell on your site?
+          Why don&rsquo;t you sell on your site?
         </Text>
         <Text color="black" fontSize={["md", "xl"]} marginBottom="8px">
           All of our items are custom made, and we sell through them very
@@ -45,12 +44,12 @@ export default function About() {
           How do I care for my butcher block or charcuterie board?
         </Text>
         <Text color="black" fontSize={["md", "xl"]} marginBottom="8px">
-          First of all, PLEASE don't put me in the dishwasher or submerge me in
+          First of all, PLEASE don&rsquo;t put me in the dishwasher or submerge me in
           hot water ☺️. To clean me, mild dish soap and warm water will do the
           trick. Give me a quick towel dry and you're good for the next use. Oh,
           and once in awhile (every couple months) give me spa treatment by
           putting some food grade mineral oil on me, or some board butter (check
-          it out on amazon). Don't forget, I'm all natural, so if you put
+          it out on amazon). Don&rsquo;t forget, I&rsquo;m all natural, so if you put
           certain foods on me, I can stain a little, and sharp knives will leave
           a mark.
         </Text>
@@ -58,11 +57,11 @@ export default function About() {
           How long does it take for my custom order?
         </Text>
         <Text color="black" fontSize={["md", "xl"]} marginBottom="8px">
-          That depends how busy I get. If you're looking for a custom butcher
+          That depends how busy I get. If you&rsquo;re looking for a custom butcher
           block or charcuterie board, give me at least 2 weeks before the event
           you need it for. If it's a custom table, it can take months for me to
           source the wood, ensure the design is what you're after, and get it to
-          you. If it's during the holidays, I stop taking orders December 1st to
+          you. If it&rsquo;s during the holidays, I stop taking orders December 1st to
           make sure everyone gets theirs on time. Best bet is to contact me.
         </Text>
         <Text color="brown" fontSize={["xl", "2xl"]} marginBottom="16px">
@@ -71,7 +70,7 @@ export default function About() {
         <Text color="black" fontSize={["md", "xl"]} marginBottom="8px">
           This is a common question. The resin I use is food safe per the
           manufacturer and their MSDS data (and also made in the USA!). Yes,
-          resin is a chemical (when it's in liquid form), but when the parts are
+          resin is a chemical (when it&rsquo;s in liquid form), but when the parts are
           mixed together, they create a chemical reaction that hardens the
           compound. When the curing process is finished (about a week), what is
           left over is a completely inert substance, meaning it is safe for use.
