@@ -29,13 +29,13 @@ export default function About() {
         shadow="md"
         width={["90%", "80%", "60%"]}
         minHeight="50vh"
-        maxHeight={["70vh", "60vh"]}
+        maxHeight={["90vh", "60vh"]}
         textAlign="center"
         marginTop={["30px", "80px"]}
         padding={["15px", "30px"]}
         flex="1"
         marginBottom="15px"
-        overflow="hidden"
+        overflow="scroll"
       >
         <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6">
           At BD Custom Timber Works, we&rsquo;re passionate about creating

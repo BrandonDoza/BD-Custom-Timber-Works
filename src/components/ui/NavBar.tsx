@@ -79,7 +79,7 @@ export default function NavBar() {
           top="0"
           left="0"
           zIndex="1000"
-          height="40vh"
+          height="35vh"
           overflowY="auto"
           display="flex"
           flexDirection="column"
@@ -89,7 +89,7 @@ export default function NavBar() {
           <Stack align="center">
             <Button
               variant="solid"
-              onClick={navigateToProjects}
+              onClick={() => { navigateToProjects(); setMobileMenuOpen(false); }}
               bg="black "
               color="white"
               width="120%"
@@ -98,7 +98,7 @@ export default function NavBar() {
             </Button>
             <Button
               variant="solid"
-              onClick={navigateToContact}
+              onClick={() => { navigateToContact(); setMobileMenuOpen(false); }}
               bg="black "
               color="white"
               width="120%"
@@ -107,7 +107,7 @@ export default function NavBar() {
             </Button>
             <Button
               variant="solid"
-              onClick={navigateToAbout}
+              onClick={() => { navigateToAbout(); setMobileMenuOpen(false); }}
               bg="black "
               color="white"
               width="120%"
@@ -116,7 +116,7 @@ export default function NavBar() {
             </Button>
             <Button
               variant="solid"
-              onClick={navigateToCustomEngraving}
+              onClick={() => { navigateToCustomEngraving(); setMobileMenuOpen(false); }}
               bg="black "
               color="white"
               width="120%"
