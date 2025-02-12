@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Stack } from "@chakra-ui/react";
 import { RiMailLine } from "react-icons/ri";
 import { GiHammerNails } from "react-icons/gi";
 import { AiOutlineUser } from "react-icons/ai";
