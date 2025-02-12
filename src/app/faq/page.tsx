@@ -46,7 +46,7 @@ export default function About() {
         <Text color="black" fontSize={["md", "xl"]} marginBottom="8px">
           First of all, PLEASE don&rsquo;t put me in the dishwasher or submerge me in
           hot water ☺️. To clean me, mild dish soap and warm water will do the
-          trick. Give me a quick towel dry and you're good for the next use. Oh,
+          trick. Give me a quick towel dry and you&rsquo;re good for the next use. Oh,
           and once in awhile (every couple months) give me spa treatment by
           putting some food grade mineral oil on me, or some board butter (check
           it out on amazon). Don&rsquo;t forget, I&rsquo;m all natural, so if you put
@@ -59,8 +59,8 @@ export default function About() {
         <Text color="black" fontSize={["md", "xl"]} marginBottom="8px">
           That depends how busy I get. If you&rsquo;re looking for a custom butcher
           block or charcuterie board, give me at least 2 weeks before the event
-          you need it for. If it's a custom table, it can take months for me to
-          source the wood, ensure the design is what you're after, and get it to
+          you need it for. If it&rsquo;s a custom table, it can take months for me to
+          source the wood, ensure the design is what you&rsquo;re after, and get it to
           you. If it&rsquo;s during the holidays, I stop taking orders December 1st to
           make sure everyone gets theirs on time. Best bet is to contact me.
         </Text>
@@ -76,7 +76,7 @@ export default function About() {
           left over is a completely inert substance, meaning it is safe for use.
           That being said, there is the possiblitiy, if you use a knife of the
           resin surface, tiny pieces could potentially be removed from the area,
-          and they could potentially enter your body. That's a small chance, and
+          and they could potentially enter your body. That&rsquo;s a small chance, and
           again, it is an inert substance at that point.
         </Text>
         <Text color="brown" fontSize={["xl", "2xl"]} marginBottom="16px">
