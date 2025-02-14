@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         style={{
-          height: "100vh",
+          height:"30vh",
           margin: "0",
           display: "flex",
           flexDirection: "column",

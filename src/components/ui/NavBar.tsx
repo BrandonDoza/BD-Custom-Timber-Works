@@ -35,7 +35,7 @@ export default function NavBar() {
     <Box
       bg="#D1D0CE"
       width="100%"
-      height={["100px", "180px"]}
+      height={["100px", "120px"]}
       display="flex"
       alignItems="center"
       px={["4", "8"]}
@@ -45,7 +45,7 @@ export default function NavBar() {
         <Link href="/">
           <Image
             src="/images/blackLogo.svg"
-            boxSize={["120px", "250px"]}
+            boxSize={["120px", "150px"]}
             borderRadius="full"
             fit="cover"
             alt="BD Custom Timber Works Logo - Saw Blade Outline"

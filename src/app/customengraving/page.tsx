@@ -25,7 +25,7 @@ export default function CustomEngraving() {
         minHeight="50vh"
         maxHeight={["60vh", "60vh"]}
         textAlign="center"
-        marginTop={["30px", "80px"]}
+        marginTop={["30px", "30px"]}
         padding={["15px", "30px"]}
         flex="1"
         marginBottom="15px"

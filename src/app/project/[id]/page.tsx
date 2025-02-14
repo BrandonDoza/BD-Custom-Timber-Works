@@ -36,7 +36,7 @@ export default function ProjectPage({
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
-        minHeight: "100vh",
+        minHeight: "70vh",
         padding: "20px",
         backgroundColor: "#f8f8f8",
       }}
@@ -47,7 +47,7 @@ export default function ProjectPage({
           padding: "20px",
           borderRadius: "12px",
           boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-          maxWidth: "500px",
+          maxWidth: "800px",
           textAlign: "center",
         }}
       >
