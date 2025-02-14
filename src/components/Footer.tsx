@@ -25,7 +25,7 @@ export default function Footer() {
         />
       </Flex>
 
-      <Text fontSize="sm" mt="10px" color="black">
+      <Text fontSize="sm" mt="0px" color="black">
         © {new Date().getFullYear()} BD Custom Timber Works. All Rights
         Reserved.
       </Text>

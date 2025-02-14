@@ -28,7 +28,7 @@ export default function ProjectCard({
       onClick={navigateToIndividualProject}
       cursor="pointer"
       width="100%"
-      maxW="400px"
+      maxW="800px"
       height="420px"
       display="flex"
       flexDirection="column"

@@ -25,9 +25,9 @@ export default function Home() {
         width={["90%", "80%", "50%"]}
         height="auto"
         textAlign="center"
-        marginTop={["30px", "80px"]}
+        marginTop={["30px", "15px"]}
         marginBottom="15px"
-        padding={["5px", "20px"]}
+        padding={["5px", "5px"]}
       >
         <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6">
           BD Custom Timber Works brings your vision to life with the timeless
