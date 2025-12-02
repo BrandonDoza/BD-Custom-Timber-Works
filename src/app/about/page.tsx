@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Box, Text, Image, Button } from "@chakra-ui/react";
+import { Container, Box, Text, Image, Button, Link } from "@chakra-ui/react";
 import { useAppRouter } from "../RouterContext";
 import { FaRegQuestionCircle } from "react-icons/fa";
 
@@ -28,8 +28,6 @@ export default function About() {
         borderRadius="lg"
         shadow="md"
         width={["90%", "80%", "60%"]}
-        // minHeight="50vh"
-        // maxHeight={["90vh", "60vh"]}
         height="auto"
         textAlign="center"
         marginTop={["30px", "20px"]}
@@ -41,16 +39,33 @@ export default function About() {
         <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6">
           At BD Custom Timber Works, we&rsquo;re passionate about creating
           exceptional, handcrafted wood pieces that elevate any space. Founded
-          by Brandon, a woodworking enthusiast based in the heart of Arvada,
-          Colorado, our company is driven by a love for the outdoors and the
-          beauty of the mountains that surround us. When Brandon isn&rsquo;t in
-          the workshop, you&rsquo;ll find him mountain biking, exploring nature
-          with his two dogs, or spending quality time with his wife. We bring
-          that same dedication and care into every project, whether it&rsquo;s
-          custom furniture, charcuterie boards, or unique woodworking solutions.
-          At BD Custom Timber Works, we don&rsquo;t just build furniture—we
-          craft pieces that tell a story and become a part of your home.
+          by Brandon, a mortgage broker by day and woodworking enthusiast based
+          in the heart of Arvada, Colorado, our company is driven by a love for
+          the outdoors and the beauty of the mountains that surround us. When
+          Brandon isn&rsquo;t in the workshop or helping clients with home
+          financing, you&rsquo;ll find him mountain biking, exploring nature
+          with his two dogs, or spending quality time with his wife.
+          <br />
+          <br />
+          If you ever need help not just furnishing a home, but financing one,
+          you can also find Brandon at{" "}
+          <Link
+            href="https://homeloanswithbrandon.com"
+            color="blue.600"
+            isExternal
+          >
+            Home Loans With Brandon
+          </Link>
+          .
+          <br />
+          <br />
+          We bring that same dedication and care into every project, whether
+          it&rsquo;s custom furniture, charcuterie boards, or unique woodworking
+          solutions. At BD Custom Timber Works, we don&rsquo;t just build
+          furniture—we craft pieces that tell a story and become a part of your
+          home.
         </Text>
+
         <Button
           size={["sm", "xl"]}
           width={["150px", "180px"]}

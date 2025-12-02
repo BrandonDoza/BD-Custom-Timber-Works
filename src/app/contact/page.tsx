@@ -74,7 +74,7 @@ export default function Contact() {
 
       emailjs
         .send(
-          "service_pbo2ar9", // Service ID
+          "service_zqzonfg", // Service ID
           "template_whh7l9q", // Template ID
           templateParams,
           "xlOn1RAT9PBJN7u8B" // EmailJS user ID
