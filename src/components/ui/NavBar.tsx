@@ -121,7 +121,7 @@ export default function NavBar() {
               color="white"
               width="120%"
             >
-              Custom Engraving
+              Engraving
             </Button>
           </Stack>
         </Box>
@@ -190,7 +190,7 @@ export default function NavBar() {
           }}
         >
           <GiLaserPrecision />
-          <Box display={["none", "inline"]}>Custom Engraving</Box>
+          <Box display={["none", "inline"]}>Engraving</Box>
         </Button>
       </Box>
     </Box>

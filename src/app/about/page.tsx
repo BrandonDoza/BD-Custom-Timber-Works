@@ -39,12 +39,12 @@ export default function About() {
         <Text color="black" fontSize={["md", "xl"]} lineHeight="1.6">
           At BD Custom Timber Works, we&rsquo;re passionate about creating
           exceptional, handcrafted wood pieces that elevate any space. Founded
-          by Brandon, a mortgage broker by day and woodworking enthusiast based
-          in the heart of Arvada, Colorado, our company is driven by a love for
+          by Me, Brandon, a mortgage broker by day and woodworking enthusiast based
+          in the heart of Arvada, Colorado. I&rsquo;m driven by a love for
           the outdoors and the beauty of the mountains that surround us. When
-          Brandon isn&rsquo;t in the workshop or helping clients with home
-          financing, you&rsquo;ll find him mountain biking, exploring nature
-          with his two dogs, or spending quality time with his wife.
+          I'm not in the workshop or helping clients with home
+          financing, you&rsquo;ll find me mountain biking, exploring nature
+          with my two dogs, or spending quality time with my wife.
           <br />
           <br />
           If you ever need help not just furnishing a home, but financing one,
@@ -52,7 +52,8 @@ export default function About() {
           <Link
             href="https://homeloanswithbrandon.com"
             color="blue.600"
-            isExternal
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Home Loans With Brandon
           </Link>
