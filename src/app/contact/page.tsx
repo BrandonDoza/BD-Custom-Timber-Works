@@ -77,7 +77,7 @@ export default function Contact() {
           "service_zqzonfg", // Service ID
           "template_whh7l9q", // Template ID
           templateParams,
-          "xlOn1RAT9PBJN7u8B" // EmailJS user ID
+          "Zb4pO9EfpLzWgF5bb" // EmailJS user ID
         )
         .then(
           (response) => {
