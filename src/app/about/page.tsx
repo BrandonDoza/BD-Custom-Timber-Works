@@ -42,7 +42,7 @@ export default function About() {
           by Me, Brandon, a mortgage broker by day and woodworking enthusiast based
           in the heart of Arvada, Colorado. I&rsquo;m driven by a love for
           the outdoors and the beauty of the mountains that surround us. When
-          I'm not in the workshop or helping clients with home
+          I&rsquo;m not in the workshop or helping clients with home
           financing, you&rsquo;ll find me mountain biking, exploring nature
           with my two dogs, or spending quality time with my wife.
           <br />
